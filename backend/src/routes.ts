@@ -8,6 +8,8 @@ import { isAthenticaded } from "./middlewares/isAthenticaded";
 import { CreateCategoryController } from "./controllers/category/CreateCategoryController";
 import { ListCategoryController } from "./controllers/category/ListCategoryController";
 import { CreateProductController } from "./controllers/products/CreateProductController";
+import { ListByCategoryController } from "./controllers/products/ListByCategoryController";
+import { CreateOrderController } from "./controllers/order/CreateOrderController";
 
 import uploadConfig from "./config/multer";
 
@@ -33,4 +35,14 @@ router.post(
   upload.single("file"),
   new CreateProductController().handle
 );
+
+router.get(
+  "/category/product",
+  isAthenticaded,
+  new ListByCategoryController().handle
+);
+
+// Rotas Order
+router.post("/order", isAthenticaded, new CreateOrderController().handle);
+
 export { router };
