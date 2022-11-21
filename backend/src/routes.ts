@@ -10,6 +10,7 @@ import { ListCategoryController } from "./controllers/category/ListCategoryContr
 import { CreateProductController } from "./controllers/products/CreateProductController";
 import { ListByCategoryController } from "./controllers/products/ListByCategoryController";
 import { CreateOrderController } from "./controllers/order/CreateOrderController";
+import { RemoveOrderController } from "./controllers/order/RemoveOrderController";
 
 import uploadConfig from "./config/multer";
 
@@ -44,5 +45,6 @@ router.get(
 
 // Rotas Order
 router.post("/order", isAthenticaded, new CreateOrderController().handle);
+router.delete("/order", isAthenticaded, new RemoveOrderController().handle);
 
 export { router };
