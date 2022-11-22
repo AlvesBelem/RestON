@@ -1,0 +1,94 @@
+.containerCenter{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--gray);
+
+    div Image{
+        width: 30px;
+    }
+}
+
+.logo{
+    width: 50%;
+    height: auto;
+}
+
+.login{
+    margin-top: 2rem;
+    width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem 1.5rem;
+
+    form{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    form button{
+        height: 40px;
+        font-size: 1.2rem;
+    }
+}
+
+.text{
+    margin-top: 1rem;
+    color: var(--white);
+    cursor: pointer;
+}
+
+@media(max-width: 2560px){
+    .login{
+        width: 25%;
+    }
+    .logo{
+        width: 25%;
+        height: auto;
+    }
+}
+
+@media(max-width: 1080px){
+    .login{
+        width: 50%;
+    }
+    .logo{
+        width: 50%;
+        height: auto;
+    }
+}
+
+@media(max-width: 620px){
+    .login{
+        width: 90%;
+    }
+    .logo{
+        width: 50%;
+        height: auto;
+    }
+}
+
+@media(max-width: 280px){
+    .login{
+        width: 90%;
+        margin-top: 0.5rem;
+    }
+    .logo{
+        
+        width: 50%;
+        height: auto;
+    }
+
+    .text{
+        margin-top: 1rem;
+        color: var(--white);
+        cursor: pointer;
+        font-size: 0.8rem;
+    }
+}
+
