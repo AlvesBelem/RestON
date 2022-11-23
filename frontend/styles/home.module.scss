@@ -5,19 +5,16 @@
     align-items: center;
     flex-direction: column;
     background-color: var(--gray);
-
-    div Image{
-        width: 30px;
-    }
 }
 
 .logo{
+    
     width: 50%;
     height: auto;
 }
 
 .login{
-    margin-top: 2rem;
+    margin-top: .3rem;
     width: 600px;
     display: flex;
     align-items: center;
@@ -37,6 +34,7 @@
     }
 
     h1{
+        
         color: var(--white);
         padding-bottom: 1rem;
         font-size: 1.5rem;

@@ -9,8 +9,10 @@ import { Input } from '../components/ui/Input'
 import { Button } from '../components/ui/Button'
 
 import { AuthContext } from '../contexts/AuthContext'
-
+import { toast } from 'react-toastify';
 import Link from 'next/link'
+import { canSSRGuest } from '../utils/canSSRGuest'
+
 
 
 export default function Home() {
@@ -27,7 +29,7 @@ export default function Home() {
     event.preventDefault();
 
     if (email === '' || password === '') {
-      alert("Preencha os dados");
+      toast.warning('Informe todos os campos');
       return;
     }
 
@@ -88,3 +90,11 @@ export default function Home() {
 
   )
 }
+
+// criando estrutura de server - side para rotas que podem sert acessadas por usuarios nao alogados /utils/canSSRGuest
+
+export const getServerSideProps = canSSRGuest(async (ctx) => {
+  return {
+    props: {}
+  }
+})

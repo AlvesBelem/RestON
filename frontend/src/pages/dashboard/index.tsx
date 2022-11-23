@@ -1,3 +1,7 @@
+import { canSSRAuth } from "../../utils/canSSRAuth"
+
+
+
 export default function Dashboard() {
     return (
         <div>
@@ -5,3 +9,10 @@ export default function Dashboard() {
         </div>
     )
 }
+
+// funcao para deicar somente usuarios logados acessar a pagina
+export const getServerSideProps = canSSRAuth(async (ctx) => {
+    return {
+        props: {}
+    }
+});
