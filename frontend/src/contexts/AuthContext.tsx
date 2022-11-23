@@ -1,4 +1,4 @@
-import { createContext, ReactNode, useState } from 'react';
+import { createContext, ReactNode, useState, useEffect } from 'react';
 import { destroyCookie, setCookie, parseCookies } from 'nookies'
 import Router from 'next/router'
 import { api } from '../services/apiClient'
@@ -48,6 +48,28 @@ export function signOut() {
 
 
 export function AuthProvider({ children }: AuthProviderProps) {
+
+    // criando cliclo de vida 
+    useEffect(() => {
+        // pegar token no cookie
+        const { '@nextauth.token': token } = parseCookies();
+        if (token) {
+            api.get('/me').then(response => {
+                const { id, name, email } = response.data;
+
+                setUser({
+                    id,
+                    name,
+                    email,
+                })
+            })
+                .catch(() => {
+                    // se deuerro deslogamos o user
+                    signOut();
+                })
+        }
+    }, [])
+
 
     // recrbendo id, name, email no contexto
     const [user, setUser] = useState<UserProps>()
