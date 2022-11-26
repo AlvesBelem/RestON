@@ -67,7 +67,7 @@ model Item {
   amount     Int
   created_at DateTime? @default(now())
   updated_at DateTime? @default(now())
-  Order      Order     @relation(fields: [orderId], references: [id])
+  order      Order     @relation(fields: [orderId], references: [id])
   orderId    String
   product    Product   @relation(fields: [productId], references: [id])
   productId  String
