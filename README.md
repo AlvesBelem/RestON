@@ -1,6 +1,6 @@
 # RestON
 
-Prisma: utilizar npx prisma generate para não gerar erro no na importação do PrismaClient.
+Sistema de pedidos por app mobile que ao finalizar, o memso aparece no frontend para visualização e enceramento do pedido.
 
 Frontend
 
