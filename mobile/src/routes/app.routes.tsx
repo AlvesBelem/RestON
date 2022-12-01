@@ -11,7 +11,10 @@ export type StackParamsList = {
         number: number | string;
         orderId: string;
     };
-    FinishOrder: undefined;
+    FinishOrder: {
+        number: number | string;
+        orderId: string;
+    }
 }
 
 
@@ -34,8 +37,15 @@ function AppRoutes() {
             <Stack.Screen
                 name='FinishOrder'
                 component={FinishOrder}
-                options={{ headerShown: false }}
+                options={{
+                    title: 'Finalizando',
+                    headerStyle: {
+                        backgroundColor: '#1d1d2e'
+                    },
+                    headerTintColor: '#fff'
+                }}
             />
+
         </Stack.Navigator>
     )
 }
