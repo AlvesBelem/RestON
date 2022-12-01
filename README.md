@@ -10,10 +10,7 @@ Frontend
 
 Mobile
 
-![Screenshot_20221201-112756](https://user-images.githubusercontent.com/59449334/205080395-5548eab9-24bd-4de1-9b63-4d69550b49b2.png)
-![Screenshot_20221201-112808](https://user-images.githubusercontent.com/59449334/205080456-3da1113f-6ac1-4fea-be9d-c790109ac283.png)
-![Screenshot_20221201-112820](https://user-images.githubusercontent.com/59449334/205080464-7f374fbb-5ad5-4370-9611-d4418629780f.png)
-![Screenshot_20221201-112828](https://user-images.githubusercontent.com/59449334/205080477-f23d1dc0-2ddc-45cc-9651-e2d4d15da4b6.png)
+![tela_mobile](https://user-images.githubusercontent.com/59449334/205085912-5b682f30-456f-4ccd-aac4-3e256b9b4d14.png)
 
 Backend
 
